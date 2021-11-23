@@ -1,30 +1,53 @@
 \chapter{Conceito do projeto}
 \label{chap:fundteor}
 %--------- NEW SECTION ----------------------
-Os robôs móveis têm a capacidade de se moverem sem a assistência de um operador humano. Os mesmos podem ser classificados,quanto ao sistema de locomoção, como terrestres, aquáticos e aéreos. Os terrestres são subdivididos em robôs que possuem rodas, pernas (bípedes) ou esteiras (ref:Review ArticleA review of mobile robots:). Cada um desses métodos possuem características especifícas quanto ao movimento a ser realizado. Os bípedes, por exemplo, simulam um caminhar antropomórfico, semelhante aos humanos. 
+\section{Webots}
+O software Projeta facilmente simulações robóticas completas usando a biblioteca de ativos Webots que inclui
+robôs, sensores, atuadores, objetos e materiais.
+\subsection{PIONEER}
+Veículo terrestre não tripulado (VTNT) da empresa Adept MobileRobots.
+São equipados com sonares e enconders, possibilitando, por exemplo, o mapeamento de um ambiente desconhecido.
+\begin{figure} [h!]	
+   \centering
+   \caption{PIONEER}
+   \includegraphics[width=0.4\textwidth]{pioneer.png}
+   \caption*{Fonte:robotica.ufv.br/laboratorios/.}
+   \label{fig:pioneer}
+\end{figure}	
 
-O desenvolvimento deste projeto consiste em produzir um robô que possa caminhar sobre duas pernas. Além disso, o walker deve se locomover de forma autonôma a fim de realizar uma dada missão.
 
-Neste capítulo serão abordados os requisitos do cliente, os requisistos técnicos, a missão do robô e a pesquisa por similares. 
+\subsection{Sensor de distância} 
+O sensor de distância, é um tipo de sensor que mede a distância entre o robô e um objeto desejado.
+Abaixo pode ser visto 16 feiches que representam as posições dos sensores de distância do Pioneer no Webots.
 
+\begin{figure} [h!]	
+   \centering
+   \caption{Representação do sensor de distância}
+   \includegraphics[width=0.4\textwidth]{sensord.png}
+   \caption*{Fonte:Própria.}
+   \label{fig:sensordistancia}
 
+\end{figure}	
 
-%conferir se precisa de requisitos do cliente
-\section{Requisitos do cliente}
- O cliente definiu certos requisitos quanto à operação e  às características do robô:
- \begin{itemize}
-    \item Operar em uma área de 2x1,5m;
-    \item Possuir uma altura de aproximadamente 30 cm;
-    \item Ser capaz de operar por, no mínimo 20 minutos;
-    \item Ser capaz de desviar de obstáculos;
- \end{itemize}
+\subsection{Sensor de Luminosidade} 
+sensor é medir a intensidade de luz do ambiente ao seu redor, variando o estado de sua saída digital caso detectado um determinado nível de luminosidade. 
+Abaixo pode ser visto um cubo amarelo que representa o sensor luminosidade adicionado no Pioneer.
 
- \section{Requisitos técnicos}
+\begin{figure} [h!]	
+   \centering
+   \caption{Representação do sensor de luminosidade}
+   \includegraphics[width=0.4\textwidth]{sensorl.jpeg}
+   \caption*{Fonte:Própria.}
+   \label{fig:sensorluminosidade}
 
- \section{Missão}
+\end{figure}	
+ \section{Turtlesim}
+
+ \section{Husky}
  %desenvolver mais
  Além disso, o Walker deve realizar um desafio, que consiste em navegar de forma autônoma, se localizar por meio de tags e encontrar um determinado objeto.
- \section{Pesquisa por similares}
+ \section{CPP workbook}
+ \section{Python workbook1e2}
 %----------------------------------------------------------
 
 %--------- NEW SECTION ----------------------
