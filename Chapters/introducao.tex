@@ -1,38 +1,86 @@
 \chapter{Introdução}
 \label{chap:intro}
-
-Este pode ser um parágrafo citado por alguém \cite{Barabasi2003-1}.
-
+\subsection{Webots}
+Webots é um aplicativo de desktop de código aberto e multiplataforma usado para simular robôs. 
+Ele fornece um ambiente de desenvolvimento completo para modelar, programar e simular robôs.
+Ele foi projetado para um uso profissional e é amplamente utilizado na indústria, educação e pesquisa.
+Cyberbotics Ltd. mantém Webots como seu produto principal continuamente desde 1998.
+\subsection{Turtlesim SETPOINT POSITION }
+Uma maneira simples de aprender o básico de ROS é usando o simulador turtlesim. Que consiste na simulação 
+de uma janela grafica que mostra um robô com formato de tartaruga. Esta tartaruga pode ser movidar por 
+toda a janela utilizando comandos de ROS como roscore, rosrum... ou utilizando o teclado/joystick.
+\subsection{Husky}
+O Husky é um veículo terrestre não tripulado (UGV) robusto, pronto para uso ao ar livre, adequado para 
+pesquisas e aplicações de prototipagem rápida e oferece suporte total a ROS.
+\subsection{CPP workbook}
+O C++ é uma linguagem de programação de nível médio, baseada na linguagem C.
+Tem uma enorme variedade de códigos, pois alem de seus códigos, pode contar com vários da linguagem C.
+Esta variedade possibilita a programação em alto e baixo níveis.
+\subsection{Python workbook1e2}
+Python é uma linguagem de programação de alto nível, ou seja, com sintaxe mais simplificada e próxima da 
+linguagem humana, utilizada nas mais diversas aplicações, como desktop, web, servidores e ciência de dados.
 %--------- NEW SECTION ----------------------
 \section{Objetivos}
 \label{sec:obj}
-Este projeto consiste em desenvolver um robô bípede de pequeno porte, ou seja que se desloca sobre dois pés. O robô deve ser capaz de se locomover e desviar de obstáculos em um determinado ambiente. 
-
-
+      \item Webots:
+Desenvolver um sistema de navegação autônoma, de forma que o robô consiga chegar 
+á região iluminada do mapa pré-definido, evitando todos os obstáculos do percurso em 2 minutos.
+      \item Turtlesim:
+Fazer um controlador de posição para a tartaruga que da um ponto (X, Y) a tartaruga 
+deve atingir o ponto com certo erro associado.
+      \item Husky:
+Simular a navegação do robô Husky como está descrito no tutorial do ROS.
+      \item CPP workbook:
+Demonstrar os conhecimentos adquiridos nos tutoriais de c++.
+      \item Python workbook1e2:
+Fornecer uma oportunidade para que todos evoluam no conceito de codificação.
 \subsection{Objetivos Específicos}
 \label{ssec:objesp}
-Os objetivos específicos deste projeto são:
+\subsection{webots}
+Os objetivos específicos deste desafio são:
 \begin{itemize}
-      \item Desenvolver habilidades de gestão de projetos.
-      \item Desenvolver algoritmos utilizando ROS;
-      \item Utilizar visão computacional;
-      \item Simular um robô no gazebo;
+      \item Fazer navegação do PIONEER;
+      \item Utilizar o repositório https://github.com/Brazilian-Institute-of-Robotics/desafiorobotica.git;
+      \item Utilizar sensor de luminosidade;
+      \item Simular no webots;
   \end{itemize}
-
-
-
+\subsection{Turtlesim SETPOINT POSITION}
+Os objetivos específicos deste desafio são:
+\begin{itemize}
+      \item A posição do ponto de ajuste deve ser definida por meio de linha de comando;
+      \item A escolha da linguagem de programação é Python;
+      \item O código deve estar disponível em um repositório GitHub;
+      \item O erro aceito é em torno de 0,1;
+  \end{itemize}
+\subsection{Husky}
+Os objetivos específicos deste desafio são:
+\begin{itemize}
+      \item Fazer o tutorial Husky;
+      \item Utilizar os pacotes do Husky;
+      \item Simular a navegação nos 4 modos;
+      \item Simular usando o gazebo;
+  \end{itemize}
+\subsection{CPP workbook}
+Os objetivos específicos deste desafio são:
+\begin{itemize}
+      \item Fazer os desafios propostos;
+      \item Utilizar C++ para a resolução;
+      \item O código deve estar disponível em um repositório GitHub;
+  \end{itemize}
+  \subsection{Python workbook1e2}
+  Os objetivos específicos deste desafio são:
+  \begin{itemize}
+        \item Fazer os desafios propostos;
+        \item Utilizar Python para a resolução;
+        \item Cada exercício deve ser preparado na menor quantidade de linhas possível;
+        \item Os comentários são necessários para você explicar cada etapa do código;
+    \end{itemize}
 %--------- NEW SECTION ----------------------
 \section{Justificativa}
 \label{sec:justi}
 
-O pesquisador/estudante deve apresentar os aspectos mais
-relevantes da pesquisa ressaltando os impactos (e.g. cient\'ifico,
-tecnol\'ogico, econ\^omico, social e ambiental) que a pesquisa
-causar\'a. Deve-se ter cuidado com a ingenuidade no momento em que
-os argumentos forem apresentados.
-
-
-
+Demonstrar os conhecimentos adquiridos dos topicos de Webots,ROS,CPP e python durante o processo de todos os desafios, 
+a fim de ter um ótimo desempenho nas atividades do Laboratório.
 
 %--------- NEW SECTION ----------------------
 \section{Organização do documento}
@@ -42,10 +90,10 @@ Este documento apresenta $5$ capítulos e está estruturado da seguinte forma:
 
 \begin{itemize}
 
-  \item \textbf{Capítulo \ref{chap:intro} - Introdução}: Contextualiza o âmbito, no qual a pesquisa proposta está inserida. Apresenta, portanto, a definição do problema, objetivos e justificativas da pesquisa e como este \thetypeworkthree está estruturado;
-  \item \textbf{Capítulo \ref{chap:fundteor} - Fundamentação Teórica}: XXX;
-  \item \textbf{Capítulo \ref{chap:metod} - Materiais e Métodos}: XXX;
-  \item \textbf{Capítulo \ref{chap:result} - Resultados}: XXX;
-  \item \textbf{Capítulo \ref{chap:conc} - Conclusão}: Apresenta as conclusóes, contribuições e algumas sugestões de atividades de pesquisa a serem desenvolvidas no futuro.
+  \item \textbf{Capítulo 1 - Introdução}: Contextualiza o âmbito, no qual os desafios estão inseridos. Apresenta, portanto, a definição dos desafios, objetivos e justificativas do mesmo, alem de como este \thetypeworkthree está estruturado;
+  \item \textbf{Capítulo 2 - Fundamentação Teórica}: As teorias usadas em cada um dos desafios;
+  \item \textbf{Capítulo 3 - Materiais e Métodos}: De que forma os desafios foram feitos;
+  \item \textbf{Capítulo 4 - Resultados}: Os resultados obtidos em cada um dos desafios propostos;
+  \item \textbf{Capítulo 5 - Conclusão}: Apresenta as conclusóes.
 
 \end{itemize}
