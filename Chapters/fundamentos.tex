@@ -39,11 +39,51 @@ Abaixo pode ser visto um cubo amarelo que representa o sensor luminosidade adici
    \includegraphics[width=0.4\textwidth]{sensorl.jpeg}
    \caption*{Fonte:Própria.}
    \label{fig:sensorluminosidade}
-
 \end{figure}	
-\section{Turtlesim}
-\subsection{tópicos ROS}
 
+\section{Turtlesim}
+\subsection{Nós ROS}
+Um nó é apenas um arquivo executável dentro de um pacote do ROS. Nós no ROS usam bibliotecas clientes para se comunicar com outros nós.
+Nós podem publicar e/ou subscrever em tópicos, além de poderem prover serviços também.
+\subsection{tópicos ROS}
+Nós podem publicar menssagens em tópicos assim como podem subescrever menssagens de tópicos.
+Como é o exemplo dos nós turtlesim e turtle-teleop-key que se comuniçam entre si através do tópico turtle1command-velocity
+turtle-teleop-key está publicando a tecla digitada no tópico, enquanto o turtlesim subescreve o mesmo tópico para receber a tecla digitada. 
+A imagem abaixo mostra os nós turtlesim e teleop, e o tópico command-velocity que faz a comunicação entre os dois nós.
+
+\begin{figure} [h!]	
+   \centering
+   \caption{nós e tópicos ROS}
+   \includegraphics[width=0.6\textwidth]{net1.jpeg}
+   \caption*{Fonte:Tutorials-UnderstandingTopics}
+   \label{fig:nosetopicos}
+\end{figure}	
+\subsection{Publisher e Subscribers}
+Publisher publica as informações ou mensagens no tópico e o subscriber subscreve o tópico e recebe as informações publicadas.
+As mensagens são transmitidas em um tópico e cada tópico possui um nome exclusivo na rede ROS. Se um nó deseja compartilhar informações,
+ele usa publisher para enviar dados a um tópico. Um nó que deseja receber essas informações usa subscriber desse mesmo tópico. 
+Além de seu nome exclusivo, cada tópico também possui um tipo de mensagem , que determina os tipos de mensagens que podem ser transmitidas naquele tópico.
+O conceito de publisher e subscriber pode ser melhor visto na figura abaixo.
+\begin{figure} [h!]	
+   \centering
+   \caption{publisher e subscriber ROS}
+   \includegraphics[width=0.6\textwidth]{sep.jpeg}
+   \caption*{Fonte:la.mathworks.com/help//ros/ug/exchange-data-with-ros-publishers-and-subscribers.html}
+   \label{fig:publisheresubscriber}
+\end{figure}	
+\subsection{Services e messages}
+Os nós comunicam-se entre si publicando mensagens em tópicos . Uma mensagem é uma estrutura de dados simples, composta por campos digitados.
+Os nós também podem trocar uma mensagem de solicitação e resposta como parte de uma chamada de serviço ROS .
+O modelo publisher e subscriber é um paradigma de comunicação muito flexível, mas seu transporte unilateral para muitos não é apropriado
+para interações de solicitação e resposta RPC, que geralmente são necessárias em um sistema distribuído. 
+A solicitação e resposta é feita por meio de um Serviço, que é definido por um par de mensagens : uma para a solicitação e outra para a resposta.
+\begin{figure} [h!]	
+   \centering
+   \caption{services e messages ROS}
+   \includegraphics[width=0.6\textwidth]{sem.jpeg}
+   \caption*{Fonte:robinrobotic.blogspot.com/2019/06/ros-terminology.html}
+   \label{fig:servicesemessages}
+\end{figure}	
  \section{Husky}
  %desenvolver mais
  Além disso, o Walker deve realizar um desafio, que consiste em navegar de forma autônoma, se localizar por meio de tags e encontrar um determinado objeto.
