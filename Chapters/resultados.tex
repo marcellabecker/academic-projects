@@ -28,7 +28,7 @@ para uma melhor visualização da solução tem um link do video logo abaixo e o
 \begin{figure} [h!]	
     \centering
     \caption{Pioneer completando o percurso}
-    \includegraphics[width=0.3\textwidth]{fim.jpeg}
+    \includegraphics[width=0.5\textwidth]{fim.jpeg}
     \caption*{Fonte:Própria.}
     \label{fig:fimdopercurso}
 \end{figure}
@@ -41,12 +41,16 @@ Link para assistir ao vídeo:https://www.youtube.com/watch?v=RftRevxZUOE
 Inicialmente no codigo foi feita uma função de callback que é chamada quando o subscriber recebe um dado do tópico. 
 Logo depois o nó é iniciado, para que possa ser feito os publishers e subscribers no tópicos, sendo assim 
 vel-publisher publica mensagens no tópico cmd-vel e posecb recebe a msg de coodenada da posição.
-goal-x e goal-y recebem os inputs das coordenadas x e y para onde a tartaruga deve ir. 
+
+Goal-x e goal-y recebem os inputs das coordenadas x e y para onde a tartaruga deve ir. 
+
 kp-lin e kp-ang são os controles de velocidade linear e angular definidos para que a tartaruga nao ande muito rapido nem
 muito devagar e controla o seu angulo de curvatura durante o movimento.
+
 A FUNÇÃO is-shutdown() verifica se seu programa deve sair, portanto enquanto não entrar no if que está dentro do while significa que o erro ainda é 
 maior que 0.1 e a turtle ainda não chegou ao seu destino sendo assim o programa deve continuar rodando, ate que o o erro seja 0.1 como manda o desafio
 e ela deve parar.
+
 As figuras abaixos mostram a janela da turtle antes da coordenadas e depois dela andar para coordenada (1,1).
 
 \begin{figure} [h!]	
