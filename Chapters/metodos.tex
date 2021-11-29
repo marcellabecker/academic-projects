@@ -47,17 +47,46 @@ por fim executa-se o arquivo .py quue foi a liguagem escolhida para completar es
 \end{figure}
 É posto as coordenadas x e y no caso do exemplo do desafio é 1 e 1 e a tartaruga deve ir até essa coordenada quando o erro for no máximo 0.1.
 \section{Husky}
-\textit{Quality Function Deployment} é uma ferramenta de qualidade que auxilia na conversão das demandas do cliente em características de qualidade do produto. Dessa forma, no primeiro ciclo do QFD foram analisados os requisistos do cliente e os requisitos técnicos necessários, sinalizando os pontos mais importantes e as relações entre estes. O resultado foi exposto na \ref{fig:QFD}
+\subsection{Move Base}
+Após toda a configuração e instalação dos pacotes do Husky encontrado no repositório https://github.com/husky/husky, foi executado o nó move-base no qual será enviado um comando para o robô Husky que tentará atingir a posição enviada desviando dos obstáculos e caso entre em alguma posição em que se esteja travado executa comportamentos de recuperação para continuar o trajeto enviado.
 
+Para a execução do nó move-base é necessário trés comandos o primeiro inicia o ambiente de simulação o gazebo, o segundo o visualizador rviz e o terceiro a demonstração move-base.
 \begin{figure} [h!]	
     \centering
-    \caption{ Primeiro ciclo QFD}
-    \includegraphics[width=0.8\textwidth]{Figures/QFD}
+    \caption{Comandos move base}
+    \includegraphics[width=0.9\textwidth]{comandosmb.jpeg}
     \caption*{Fonte: Autoria própria.}
-    \label{fig:QFD}
+    \label{fig:movebase}
 \end{figure}
- Através do QFD foi possível observar 
-
+\subsection{AMCL}
+O Tutorial amcl do Husky mostra como é usado o move-base com o sendo assim, amcl obtém um mapa baseado em laser que precisa ser ativado no description do robô encontrado no próprio repositório após a ativação o laser faz varreduras e transforma em mensagens que geram estimativas de posição.
+\begin{figure} [h!]	
+    \centering
+    \caption{Comandos amcl}
+    \includegraphics[width=0.9\textwidth]{comandosamcl.jpeg}
+    \caption*{Fonte: Autoria própria.}
+    \label{fig:amcl}
+\end{figure} 
+\subsection{gmapping}
+Após a execução do nó slam-gmapping será levado para o tópico sensor-msgs/LaserScan mensagens e constrói um mapa a partir dos dados de laser e posições coletados pelo husky.
+\begin{figure} [h!]	
+    \centering
+    \caption{Comandos gmapping}
+    \includegraphics[width=0.9\textwidth]{comandogm.jpeg}
+    \caption*{Fonte: Autoria própria.}
+    \label{fig:gmapping}
+\end{figure}
+\subsection{Frontier-exploration}
+O Frontier-exploration pacote fornece um costmap-2d que fornece uma implementação de um mapa de custo 2D que leva em dados de sensor do mundo, constrói uma grade de ocupação 2D ou 3D dos dados, e actionlib cliente que fornece uma interface padronizada com tarefas preemptivas
+\begin{figure} [h!]	
+    \centering
+    \caption{Comandos frontier-exploration }
+    \includegraphics[width=0.9\textwidth]{comandosf.jpeg}
+    \caption*{Fonte: Autoria própria.}
+    \label{fig:frontier-exploration}
+\end{figure}
+\section{CPP}
+\section{Python}
 % %--------- NEW SECTION ----------------------
 % \section{Interface do Usuário}
 % \label{sec:ui}

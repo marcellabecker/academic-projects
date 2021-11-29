@@ -86,7 +86,35 @@ A solicitação e resposta é feita por meio de um Serviço, que é definido por
 \end{figure}	
  \section{Husky}
  %desenvolver mais
- Além disso, o Walker deve realizar um desafio, que consiste em navegar de forma autônoma, se localizar por meio de tags e encontrar um determinado objeto.
+ \subsection{Move Base Demo}
+ Realiza o planejamento autônomo básico e movimento no Husky com um scanner a laser publicando no tópico de digitalização.
+ O nó move-base fornece uma interface ROS para configurar, executar e interagir com a pilha de navegação em um robô.
+ \begin{figure} [h!]	
+   \centering
+   \caption{move base}
+   \includegraphics[width=0.6\textwidth]{mb.jpeg}
+   \caption*{Fonte:}
+   \label{fig:movebase}
+\end{figure}
+
+A pilha de navegação recebe informações de odometria e fluxos de sensores e emite comandos de velocidade para enviar ao robô.
+
+Por padrão, o nó move-base executará as seguintes ações para tentar limpar o espaço:
+
+Primeiro, os obstáculos fora de uma região especificada pelo usuário serão removidos do mapa do robô. Em seguida, se possível, o robô executará uma rotação no local para liberar espaço. Se isso também falhar, o robô limpará seu mapa de forma mais agressiva, removendo todos os obstáculos fora da região retangular na qual ele pode girar no lugar. Isso será seguido por outra rotação no local. Se tudo isso falhar, o robô considerará seu objetivo inviável e notificará o usuário de que ele foi abortado
+
+\subsection{AMCL Demo}
+Realiza o planejamento autônomo e movimento com localização em um Husky simulado com um scanner a laser publicando no tópico de digitalização.
+amcl é um sistema de localização probabilística para um robô se movendo em 2D. Ele implementa a abordagem de localização adaptativa que usa um filtro de partículas para rastrear a posição de um robô em relação a um mapa conhecido.
+
+\subsection{Gmapping}
+realizar planejamento autônomo e movimento com localização e mapeamento simultâneo (SLAM), em um Husky simulado com um scanner a laser publicando no tópico de digitalização.
+
+O pacote gmapping fornece SLAM baseado em laser, como um nó ROS chamado slam-gmapping. Usando slam-gmapping, você pode criar um mapa de grade de ocupação 2-D a partir de dados de laser e pose coletados por um robô móvel.
+\subsection{Frontier Exploration}
+Planejamento de exploração e gmapping para mapeamento e localização (SLAM).
+
+Implementação de exploração de fronteira para ROS, estendendo-se na pilha de navegação existente. Ele aceita objetivos de exploração via actionlib, envia comandos de movimento para move-base.
  \section{CPP workbook}
  \section{Python workbook1 e 2}
 %----------------------------------------------------------

@@ -73,6 +73,112 @@ logo abaixo e o controle pode ser encontrado no repositório https://github.com/
 
 Link para assistir ao vídeo:https://youtu.be/NNkwSgDScuY
 \section{Husky}
+\subsection{Move-base}
+Com todos os comando de movimentação já configurados e as janelas rviz e gazebo ja abertas a movimentação é feita pelo mouse podendo também usar o teclado pelo comando teleop-twist-keyboard ou por controle remoto.
+As imagens abaixo mostram antes, durante e depois que a movimentação for concluida. 
+
+\begin{figure} [h!]	
+    \centering
+    \caption{Husky antes do movimento}
+    \includegraphics[width=0.7\textwidth]{antesmb.jpeg}
+    \caption*{Fonte:Própria.}
+    \label{fig:antesmovebase}
+\end{figure}
+\begin{figure} [h!]	
+    \centering
+    \caption{Husky durante o movimento}
+    \includegraphics[width=0.7\textwidth]{durantemb.jpeg}
+    \caption*{Fonte:Própria.}
+    \label{fig:durantemovebase}
+\end{figure}
+\begin{figure} [h!]	
+    \centering
+    \caption{Husky depois o movimento}
+    \includegraphics[width=0.7\textwidth]{depoismb.jpeg}
+    \caption*{Fonte:Própria.}
+    \label{fig:depoismovebase}
+\end{figure}
+\subsection{AMCL}
+Com todos os comando de movimentação já configurados e as janelas rviz e gazebo ja abertas a movimentação é feita pelo mouse podendo também usar o teclado pelo comando teleop-twist-keyboard ou por controle remoto.
+As imagens abaixo mostram antes, durante e depois que a movimentação for concluida.
+\begin{figure} [h!]	
+    \centering
+    \caption{Husky antes do movimento}
+    \includegraphics[width=0.7\textwidth]{antesamcl.jpeg}
+    \caption*{Fonte:Própria.}
+    \label{fig:antesamcl}
+\end{figure}
+\begin{figure} [h!]	
+    \centering
+    \caption{Husky durante o movimento}
+    \includegraphics[width=0.7\textwidth]{duranteamcl.jpeg}
+    \caption*{Fonte:Própria.}
+    \label{fig:duranteamcl}
+\end{figure}
+\begin{figure} [h!]	
+    \centering
+    \caption{Husky depois o movimento}
+    \includegraphics[width=0.7\textwidth]{depoisamcl.jpeg}
+    \caption*{Fonte:Própria.}
+    \label{fig:depoisamcl}
+\end{figure}
+É possivel ver que diferente do move-base o Husky consegue ter um alcance bem maior de visualização, o todos formados pelo mapa e o laiser destaca os que estão mais perto.
+\subsection{Gmapping}
+Com todos os comando de movimentação já configurados e as janelas rviz e gazebo ja abertas a movimentação é feita pelo mouse podendo também usar o teclado pelo comando teleop-twist-keyboard ou por controle remoto.
+
+As imagens abaixo mostram antes, durante e depois que a movimentação for concluida.
+\begin{figure} [h!]	
+    \centering
+    \caption{Husky antes do movimento}
+    \includegraphics[width=0.7\textwidth]{antesgm.jpeg}
+    \caption*{Fonte:Própria.}
+    \label{fig:antesgmappinng}
+\end{figure}
+\begin{figure} [h!]	
+    \centering
+    \caption{Husky durante o movimento}
+    \includegraphics[width=0.7\textwidth]{durantegm.jpeg}
+    \caption*{Fonte:Própria.}
+    \label{fig:durantegmapping}
+\end{figure}
+\begin{figure} [h!]	
+    \centering
+    \caption{Husky depois o movimento}
+    \includegraphics[width=0.7\textwidth]{depoisgm.jpeg}
+    \caption*{Fonte:Própria.}
+    \label{fig:depoisgmapping}
+\end{figure}
+
+
+
+A diferença do Gmapping é o SLAM que localiza e mapeia o ambiente simultâneamente, como pode ser visto o Husky enquando está se localizando para andar no mapa, também constrói o mapa.
+\subsection{Frontier-exploration}
+Com todos os comando de movimentação já configurados e as janelas rviz e gazebo ja abertas a movimentação é feita pelo mouse podendo também usar o teclado pelo comando teleop-twist-keyboard ou por controle remoto.
+
+As imagens abaixo mostram antes, durante e depois que a movimentação for concluida.
+\begin{figure} [h!]	
+    \centering
+    \caption{Husky antes do movimento}
+    \includegraphics[width=0.7\textwidth]{antesf.jpeg}
+    \caption*{Fonte:Própria.}
+    \label{fig:antesFrontier-exploration}
+\end{figure}
+\begin{figure} [h!]	
+    \centering
+    \caption{Husky durante o movimento}
+    \includegraphics[width=0.7\textwidth]{durantef.jpeg}
+    \caption*{Fonte:Própria.}
+    \label{fig:duranteFrontier-exploration}
+\end{figure}
+\begin{figure} [h!]	
+    \centering
+    \caption{Husky depois o movimento}
+    \includegraphics[width=0.7\textwidth]{depoisf.jpeg}
+    \caption*{Fonte:Própria.}
+    \label{fig:depoisFrontier-exploration}
+\end{figure}
+
+Conforme o robô se move, você deve ver o mapa estático cinza crescer. Ocasionalmente, o algoritmo de gmapping irá realocar o robô, causando um salto discreto no mapa. Quando a meta de exploração for concluída, você verá uma mensagem escrito DONE na janela do terminal.
 \section{cpp}
 \section{python}
 
