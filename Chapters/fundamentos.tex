@@ -3,15 +3,21 @@
 %--------- NEW SECTION ----------------------
 \section{Webots}
 O software Projeta facilmente simulações robóticas completas usando a biblioteca de ativos Webots que inclui
-robôs, sensores, atuadores, objetos e materiais.
+robôs, sensores, atuadores, objetos e materiais. \cite{Cyberbotics}
 \subsection{PIONEER}
-Veículo terrestre não tripulado (VTNT) da empresa Adept MobileRobots.
-São equipados com sonares e enconders, possibilitando, por exemplo, o mapeamento de um ambiente desconhecido.
+Existem robôs disponíveis no mercado que podem ser usados em tarefas
+no ambiente doméstico. Um exemplo deles é o robô Pioneer 3-AT, que
+recebendo diversas adaptações, pode atuar num ambiente doméstico e, a partir
+dos dados obtidos e do cenário em que está inserido, tomar decisões para
+cumprir suas tarefas \cite{OLIVEIRA}.
+
+O PIONNER é um veículo terrestre não tripulado da empresa Adept MobileRobots.
+São equipados com sonares e enconders, possibilitando, por exemplo, o mapeamento de um ambiente desconhecido.\cite{Pioneer}
 \begin{figure} [h!]	
    \centering
    \caption{PIONEER}
    \includegraphics[width=0.4\textwidth]{pioneer.png}
-   \caption*{Fonte: robotica.ufv.br/laboratorios/.}
+   \caption*{Fonte: ROS (2019).}
    \label{fig:pioneer}
 \end{figure}	
 
@@ -30,8 +36,8 @@ Abaixo pode ser visto 16 feiches que representam as posições dos sensores de d
 \end{figure}	
 
 \subsection{Sensor de Luminosidade} 
-sensor é medir a intensidade de luz do ambiente ao seu redor, variando o estado de sua saída digital caso detectado um determinado nível de luminosidade. 
-Abaixo pode ser visto um cubo amarelo que representa o sensor luminosidade adicionado no Pioneer.
+A função do sensor é medir a intensidade de luz do ambiente ao seu redor, variando o estado de sua saída digital caso detectado um determinado nível de luminosidade. 
+Abaixo pode ser visto um cubo azul que representa o sensor luminosidade adicionado no Pioneer.
 
 \begin{figure} [h!]	
    \centering
@@ -42,13 +48,15 @@ Abaixo pode ser visto um cubo amarelo que representa o sensor luminosidade adici
 \end{figure}	
 
 \section{Turtlesim}
-\subsection{Nós ROS}
-Um nó é apenas um arquivo executável dentro de um pacote do ROS. Nós no ROS usam bibliotecas clientes para se comunicar com outros nós.
-Nós podem publicar e/ou subscrever em tópicos, além de poderem prover serviços também.
-\subsection{tópicos ROS}
-Nós podem publicar menssagens em tópicos assim como podem subescrever menssagens de tópicos.
+\subsection{Nodes}
+Um nó é apenas um arquivo executável dentro de um pacote do ROS. Nodes no ROS usam bibliotecas clientes para se comunicar com outros nós.
+Nodes podem publicar e/ou subscrever em tópicos, além de poderem prover serviços também.\cite{WikiROS}
+\subsection{Tópicos ROS}
+Nodes podem publicar menssagens em tópicos assim como podem subescrever menssagens de tópicos.\cite{WikiROS}
+
 Como é o exemplo dos nós turtlesim e turtle-teleop-key que se comuniçam entre si através do tópico turtle1command-velocity
-turtle-teleop-key está publicando a tecla digitada no tópico, enquanto o turtlesim subescreve o mesmo tópico para receber a tecla digitada. 
+turtle-teleop-key está publicando a tecla digitada no tópico, enquanto o turtlesim subescreve o mesmo tópico para receber a tecla digitada. \cite{WikiROS}
+
 A imagem abaixo mostra os nós turtlesim e teleop, e o tópico command-velocity que faz a comunicação entre os dois nós.
 
 \begin{figure} [h!]	
@@ -59,10 +67,14 @@ A imagem abaixo mostra os nós turtlesim e teleop, e o tópico command-velocity 
    \label{fig:nosetopicos}
 \end{figure}	
 \subsection{Publisher e Subscribers}
-Publisher publica as informações ou mensagens no tópico e o subscriber subscreve o tópico e recebe as informações publicadas.
+
+Publisher publica as informações ou mensagens no tópico e o subscriber subscreve o tópico e recebe as informações publicadas.\cite{WikiROS}
+
 As mensagens são transmitidas em um tópico e cada tópico possui um nome exclusivo na rede ROS. Se um nó deseja compartilhar informações,
-ele usa publisher para enviar dados a um tópico. Um nó que deseja receber essas informações usa subscriber desse mesmo tópico. 
-Além de seu nome exclusivo, cada tópico também possui um tipo de mensagem , que determina os tipos de mensagens que podem ser transmitidas naquele tópico.
+ele usa publisher para enviar dados a um tópico. Um nó que deseja receber essas informações usa subscriber desse mesmo tópico. \cite{WikiROS}
+
+Além de seu nome exclusivo, cada tópico também possui um tipo de mensagem , que determina os tipos de mensagens que podem ser transmitidas naquele tópico.\cite{WikiROS}
+
 O conceito de publisher e subscriber pode ser melhor visto na figura abaixo.
 \begin{figure} [h!]	
    \centering
@@ -71,12 +83,16 @@ O conceito de publisher e subscriber pode ser melhor visto na figura abaixo.
    \caption*{Fonte: la.mathworks.com/help//ros/ug/exchange-data-with-ros-publishers-and-subscribers.html}
    \label{fig:publisheresubscriber}
 \end{figure}	
+
 \subsection{Services e messages}
-Os nós comunicam-se entre si publicando mensagens em tópicos . Uma mensagem é uma estrutura de dados simples, composta por campos digitados.
-Os nós também podem trocar uma mensagem de solicitação e resposta como parte de uma chamada de serviço ROS .
+Os Nodes comunicam-se entre si publicando mensagens em tópicos . Uma mensagem é uma estrutura de dados simples, composta por campos digitados.\cite{WikiROS}
+
+Os nodes também podem trocar uma mensagem de solicitação e resposta como parte de uma chamada de serviço ROS.
+
 O modelo publisher e subscriber é um paradigma de comunicação muito flexível, mas seu transporte unilateral para muitos não é apropriado
-para interações de solicitação e resposta RPC, que geralmente são necessárias em um sistema distribuído. 
-A solicitação e resposta é feita por meio de um Serviço, que é definido por um par de mensagens : uma para a solicitação e outra para a resposta.
+para interações de solicitação e resposta RPC, que geralmente são necessárias em um sistema distribuído.\cite{WikiROS}
+
+A solicitação e resposta é feita por meio de um Serviço, que é definido por um par de mensagens : Uma para a solicitação e outra para a resposta.
 \begin{figure} [h!]	
    \centering
    \caption{services e messages ROS}
@@ -84,10 +100,12 @@ A solicitação e resposta é feita por meio de um Serviço, que é definido por
    \caption*{Fonte: robinrobotic.blogspot.com/2019/06/ros-terminology.html}
    \label{fig:servicesemessages}
 \end{figure}	
+
  \section{Husky}
  %desenvolver mais
  \subsection{Move Base Demo}
- Realiza o planejamento autônomo básico e movimento no Husky com um scanner a laser publicando no tópico de digitalização.
+ Realiza o planejamento autônomo básico e movimento no Husky com um scanner a laser publicando no tópico de digitalização.\cite{WikiROS}
+
  O nó move-base fornece uma interface ROS para configurar, executar e interagir com a pilha de navegação em um robô.
  \begin{figure} [h!]	
    \centering
@@ -101,25 +119,26 @@ A pilha de navegação recebe informações de odometria e fluxos de sensores e 
 
 Por padrão, o nó move-base executará as seguintes ações para tentar limpar o espaço:
 
-Primeiro, os obstáculos fora de uma região especificada pelo usuário serão removidos do mapa do robô. Em seguida, se possível, o robô executará uma rotação no local para liberar espaço. Se isso também falhar, o robô limpará seu mapa de forma mais agressiva, removendo todos os obstáculos fora da região retangular na qual ele pode girar no lugar. Isso será seguido por outra rotação no local. Se tudo isso falhar, o robô considerará seu objetivo inviável e notificará o usuário de que ele foi abortado
+Primeiro, os obstáculos fora de uma região especificada pelo usuário serão removidos do mapa do robô. Em seguida, se possível, o robô executará uma rotação no local para liberar espaço. Se isso também falhar, o robô limpará seu mapa de forma mais agressiva, removendo todos os obstáculos fora da região retangular na qual ele pode girar no lugar. Isso será seguido por outra rotação no local. Se tudo isso falhar, o robô considerará seu objetivo inviável e notificará o usuário de que ele foi abortado \cite{WikiROS}
 
 \subsection{AMCL Demo}
 Realiza o planejamento autônomo e movimento com localização em um Husky simulado com um scanner a laser publicando no tópico de digitalização.
-amcl é um sistema de localização probabilística para um robô se movendo em 2D. Ele implementa a abordagem de localização adaptativa que usa um filtro de partículas para rastrear a posição de um robô em relação a um mapa conhecido.
+amcl é um sistema de localização probabilística para um robô se movendo em 2D. Ele implementa a abordagem de localização adaptativa que usa um filtro de partículas para rastrear a posição de um robô em relação a um mapa conhecido. \cite{WikiROS}
 
 \subsection{Gmapping}
 realizar planejamento autônomo e movimento com localização e mapeamento simultâneo (SLAM), em um Husky simulado com um scanner a laser publicando no tópico de digitalização.
 
-O pacote gmapping fornece SLAM baseado em laser, como um nó ROS chamado slam-gmapping. Usando slam-gmapping, você pode criar um mapa de grade de ocupação 2-D a partir de dados de laser e pose coletados por um robô móvel.
+O pacote gmapping fornece SLAM baseado em laser, como um nó ROS chamado slam-gmapping. Usando slam-gmapping, você pode criar um mapa de grade de ocupação 2-D a partir de dados de laser e pose coletados por um robô móvel.\cite{WikiROS}
+
 \subsection{Frontier Exploration}
 Planejamento de exploração e gmapping para mapeamento e localização (SLAM).
 
-Implementação de exploração de fronteira para ROS, estendendo-se na pilha de navegação existente. Ele aceita objetivos de exploração via actionlib, envia comandos de movimento para move-base.
+Implementação de exploração de fronteira para ROS, estendendo-se na pilha de navegação existente. Ele aceita objetivos de exploração via actionlib, envia comandos de movimento para move-base.\cite{WikiROS}
  \section{CPP workbook}
  C++ é uma das linguagens mais usadas do mundo, uma das poucas linguagens de alto nível realmente compiladas e está em constante evolução.
- permitindo desenvolver desde tarefas simples como aplicações na linha de comando ou web, até sistemas complexos de tempo real, muito usadas no mercado financeiro.
- \section{Python workbook1 e 2}
- O Python traz características que possibilitam escrever o mesmo requisito em menos linhas de código que o necessário em outras linguagens de programação e hoje, além de adotado na construção de soluções web, também está sendo muito utilizado em aplicações que lidam com processamento de texto, machine learning e recomendação de conteúdo, áreas que não param de crescer.
+ Esta linguagem tem serie de bibliotecas como a iostream que declara objetos que controlam a leitura e a gravação nos fluxos padrão. 
+ \section{Python workbook 1 e 2}
+ O Python traz características que possibilitam escrever o mesmo requisito em menos linhas de código que o necessário em outras linguagens de programação e hoje, além de adotado na construção de soluções web, também está sendo muito utilizado em aplicações que lidam com processamento de texto, machine learning e recomendação de conteúdo, áreas que não param de crescer.\cite{Python}
 %----------------------------------------------------------
 
 %--------- NEW SECTION ----------------------

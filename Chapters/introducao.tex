@@ -4,21 +4,56 @@
 Webots é um aplicativo de desktop de código aberto e multiplataforma usado para simular robôs. 
 Ele fornece um ambiente de desenvolvimento completo para modelar, programar e simular robôs.
 Ele foi projetado para um uso profissional e é amplamente utilizado na indústria, educação e pesquisa.
-Cyberbotics Ltd. mantém Webots como seu produto principal continuamente desde 1998.
+Cyberbotics Ltd. mantém Webots como seu produto principal continuamente desde 1998.\cite{Cyberbotics}
 \subsection{Turtlesim SETPOINT POSITION }
-Uma maneira simples de aprender o básico de ROS é usando o simulador turtlesim. Que consiste na simulação 
-de uma janela grafica que mostra um robô com formato de tartaruga. Esta tartaruga pode ser movidar por 
-toda a janela utilizando comandos de ROS como roscore, rosrum... ou utilizando o teclado/joystick.
+Uma maneira simples de aprender o básico do ROS é usando o simulador turtlesim, que consiste na simulação 
+de uma janela gráfica que mostra um robô com formato de tartaruga. Esta tartaruga pode ser movida por 
+toda a janela utilizando comandos do ROS como roscore, rosrum... ou utilizando o teclado/joystick.\cite{ROSRoboticsByExample}
 \subsection{Husky}
-O Husky é um veículo terrestre não tripulado (UGV) robusto, pronto para uso ao ar livre, adequado para 
-pesquisas e aplicações de prototipagem rápida e oferece suporte total a ROS.
+Husky é uma plataforma de desenvolvimento de robôs de médio porte. Sua grande capacidade de carga útil e sistemas de energia acomodam uma ampla variedade de cargas úteis, personalizadas para atender às necessidades de pesquisa. Câmeras estéreo, LIDAR, GPS, IMUs, manipuladores e muito mais podem ser adicionados ao UGV por nossos especialistas em integração. A construção robusta e o trem de força de alto torque do Husky podem levar sua pesquisa aonde nenhum outro robô pode ir. Husky é totalmente compatível com ROS com código-fonte aberto conduzido pela comunidade e exemplos.\cite{Clearpathrobotics}
 \subsection{CPP workbook}
-O C++ é uma linguagem de programação de nível médio, baseada na linguagem C.
-Tem uma enorme variedade de códigos, pois alem de seus códigos, pode contar com vários da linguagem C.
-Esta variedade possibilita a programação em alto e baixo níveis.
-\subsection{Python workbook1 e 2}
+C++ é uma das linguagens mais usadas do mundo, uma das poucas linguagens de alto nível realmente compiladas e está em constante evolução.
+C++ é uma das linguagens mais versáteis que existem, permitindo desenvolver desde tarefas simples como aplicações na linha de comando ou web, até sistemas complexos de tempo real, muito usadas no mercado financeiro. 
+
+C++ é uma linguagem incrivelmente versátil, mas ela se destaca como líder nos seguintes cenários:\cite{C++}
+\begin{itemize}
+\item Jogos;
+\item Mercado financeiro;
+\item Grandes aplicações
+\item Navegadores;
+\item Softwares multimídia;
+\item Pacotes Office;
+\item Sistemas operacionais;
+\item Microcontroladores; 
+\end{itemize} 
+
+\subsection{Python workbook 1 e 2}
 Python é uma linguagem de programação de alto nível, ou seja, com sintaxe mais simplificada e próxima da 
 linguagem humana, utilizada nas mais diversas aplicações, como desktop, web, servidores e ciência de dados.
+
+5 utilidades do Python são:\cite{Python}
+\begin{itemize}
+\item Data science;
+
+Data science é a prática de extrair informação e Insights através de dados. Nesse caso, data science inclui o machine learning, visualização de dados e análise de dados.
+
+Machine Learning (ML) é uma aplicação da inteligência artificial (IA) onde máquinas aprendem através programas sem estarem explicitamente programados. Em essência, machine learning permite computadores se programarem. 
+
+\item Desenvolvimento de web; 
+
+Desenvolvimento Web inclui todas as atividades usadas para criar websites e aplicativos web-based. Existem duas partes em um Website – Client-side que no qual o código roda no browser do computador do usuário; e a Server-side, onde o código roda no servidor da web.
+
+\item Desenvolvimento de aplicativos;
+
+Considerando que o Python é feito para que tenha menos tempo de desenvolvimento e esforço,  é ótimo para protótipos. Por causa de sua robustez, escalabilidade, velocidade, e versatilidade, Python é ótimo para projetos de escala empresarial.
+
+\item Scripts de automação; 
+
+Talvez o caso onde o python é mais utilizado é no Scripting. Scripting significa criar pequenos programas que fazem certas tarefas automaticamente. O Python é ideal para isso porque foi feito para ser fácil e rápido de programar. 
+\item finança/fintech;
+ 
+Tecnologia de finanças (fintech) é uma tecnologia que automatiza e melhora a entrega e uso de serviços de finanças de portais de bancos online para aplicativos blockchain. 
+\end{itemize} 
 %--------- NEW SECTION ----------------------
 \section{Objetivos}
 \label{sec:obj}
@@ -27,18 +62,17 @@ linguagem humana, utilizada nas mais diversas aplicações, como desktop, web, s
 Desenvolver um sistema de navegação autônoma, de forma que o robô consiga chegar 
 á região iluminada do mapa pré-definido, evitando todos os obstáculos do percurso em 2 minutos.
       \item Turtlesim:
-Fazer um controlador de posição para a tartaruga que da um ponto (X, Y) a tartaruga 
-deve atingir o ponto com certo erro associado.
+Fazer um controlador de posição para a tartaruga, onde o usuário irá inserir coordenadas e essa informação servirá de destino a tartaruga com certo erro associado.
       \item Husky:
 Simular a navegação do robô Husky como está descrito no tutorial do ROS.
       \item CPP workbook:
-Demonstrar os conhecimentos adquiridos nos tutoriais de c++.
-      \item Python workbook1 e 2:
-Fornecer uma oportunidade para que todos evoluam no conceito de codificação.
+Exercitar os conhecimentos adquiridos nos tutoriais de c++.
+      \item Python workbook 1 e 2:
+Fomentar e executar os conhecimentos adquiridos no processo de aprendizagem nos tutoriais.
   \end{itemize}
 \subsection{Objetivos Específicos}
 \label{ssec:objesp}
-\subsection{Webots}
+\subsubsection{Webots}
 Os objetivos específicos deste desafio são:
 \begin{itemize}
       \item Fazer navegação do PIONEER;
@@ -46,7 +80,7 @@ Os objetivos específicos deste desafio são:
       \item Utilizar sensor de luminosidade;
       \item Simular no webots;
   \end{itemize}
-\subsection{Turtlesim SETPOINT POSITION}
+\subsubsection{Turtlesim SETPOINT POSITION}
 Os objetivos específicos deste desafio são:
 \begin{itemize}
       \item A posição do ponto de ajuste deve ser definida por meio de linha de comando;
@@ -54,7 +88,7 @@ Os objetivos específicos deste desafio são:
       \item O código deve estar disponível em um repositório GitHub;
       \item O erro aceito é em torno de 0,1;
   \end{itemize}
-\subsection{Husky}
+\subsubsection{Husky}
 Os objetivos específicos deste desafio são:
 \begin{itemize}
       \item Fazer o tutorial Husky;
@@ -62,14 +96,14 @@ Os objetivos específicos deste desafio são:
       \item Simular a navegação nos 4 modos;
       \item Simular usando o gazebo;
   \end{itemize}
-\subsection{CPP workbook}
+\subsubsection{CPP workbook}
 Os objetivos específicos deste desafio são:
 \begin{itemize}
       \item Fazer os desafios propostos;
       \item Utilizar C++ para a resolução;
       \item O código deve estar disponível em um repositório GitHub;
   \end{itemize}
-  \subsection{Python workbook1 e 2}
+  \subsubsection{Python workbook 1 e 2}
   Os objetivos específicos deste desafio são:
   \begin{itemize}
         \item Fazer os desafios propostos;
