@@ -62,7 +62,7 @@ A imagem abaixo mostra os nós turtlesim e teleop, e o tópico command-velocity 
 \begin{figure} [h!]	
    \centering
    \caption{nós e tópicos ROS}
-   \includegraphics[width=0.6\textwidth]{net1.jpeg}
+   \includegraphics[width=0.5\textwidth]{net1.jpeg}
    \caption*{Fonte: Tutorials-UnderstandingTopics}
    \label{fig:nosetopicos}
 \end{figure}	
@@ -79,7 +79,7 @@ O conceito de publisher e subscriber pode ser melhor visto na figura abaixo.
 \begin{figure} [h!]	
    \centering
    \caption{publisher e subscriber ROS}
-   \includegraphics[width=0.6\textwidth]{sep.jpeg}
+   \includegraphics[width=0.5\textwidth]{sep.jpeg}
    \caption*{Fonte: la.mathworks.com/help//ros/ug/exchange-data-with-ros-publishers-and-subscribers.html}
    \label{fig:publisheresubscriber}
 \end{figure}	
@@ -96,7 +96,7 @@ A solicitação e resposta é feita por meio de um Serviço, que é definido por
 \begin{figure} [h!]	
    \centering
    \caption{services e messages ROS}
-   \includegraphics[width=0.6\textwidth]{sem.jpeg}
+   \includegraphics[width=0.4\textwidth]{sem.jpeg}
    \caption*{Fonte: robinrobotic.blogspot.com/2019/06/ros-terminology.html}
    \label{fig:servicesemessages}
 \end{figure}	
@@ -110,7 +110,7 @@ A solicitação e resposta é feita por meio de um Serviço, que é definido por
  \begin{figure} [h!]	
    \centering
    \caption{move base}
-   \includegraphics[width=0.6\textwidth]{mb.jpeg}
+   \includegraphics[width=0.5\textwidth]{mb.jpeg}
    \caption*{Fonte:}
    \label{fig:movebase}
 \end{figure}
@@ -127,12 +127,10 @@ amcl é um sistema de localização probabilística para um robô se movendo em 
 
 \subsection{Gmapping}
 realizar planejamento autônomo e movimento com localização e mapeamento simultâneo (SLAM), em um Husky simulado com um scanner a laser publicando no tópico de digitalização.
-
 O pacote gmapping fornece SLAM baseado em laser, como um nó ROS chamado slam-gmapping. Usando slam-gmapping, você pode criar um mapa de grade de ocupação 2-D a partir de dados de laser e pose coletados por um robô móvel.\cite{WikiROS}
 
 \subsection{Frontier Exploration}
 Planejamento de exploração e gmapping para mapeamento e localização (SLAM).
-
 Implementação de exploração de fronteira para ROS, estendendo-se na pilha de navegação existente. Ele aceita objetivos de exploração via actionlib, envia comandos de movimento para move-base.\cite{WikiROS}
  \section{CPP workbook}
  C++ é uma das linguagens mais usadas do mundo, uma das poucas linguagens de alto nível realmente compiladas e está em constante evolução.
